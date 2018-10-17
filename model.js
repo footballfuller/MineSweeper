@@ -121,18 +121,27 @@ function newGame(){
 	reDrawGame();
 }
 
-function enterName2(){
-	alert("key pressed");
-	var person =document.getElementById("name").addEventListener("onkeypress", function(event) { event.preventDefault(); 
-	if (event.keyCode === 13) { 
-	document.getElementById("name").click();
-	addHTML("nameContainer", person); 
-	} };
-	
-	
-	
+function search(ele) { 
+if(event.keyCode == 13 ) { addHTML("nameContainer", ele.value);} 
 }
-function search(ele) { if(event.keyCode == 13 ) { alert(ele.value); } }
+
+function dropDown(){
+	 var selectedValue = document.getElementById("selection").value;
+		setHTML("difficultyContainer","Difficulty: " + selectedValue); 
+}
+dropDown();
+//function enterName2(){
+	//alert("key pressed");
+	//var person =document.getElementById("name").addEventListener("onkeypress", function(event) { event.preventDefault(); 
+	//if (event.keyCode === 13) { 
+	//document.getElementById("name").click();
+	//addHTML("nameContainer", person); 
+	//} };
+	
+	
+	
+//}
+
 
 //function myFunction(row,col){
 //var cell= document.getElementById( "Img" ).onclick = function() {
